@@ -27,18 +27,21 @@ public class Principal {
 
         int num_linhas = lista_jogos.size();
 
+        //Imprimindo o número de linhas
         System.out.println("O número de linhas é " + num_linhas);
 
         List<Game> jogos_PS4 = Servico.gamesByPlatform(lista_jogos, Platform.PS4);
 
-        System.out.println("Numero de jogos de ps4: " + jogos_PS4.size());
-        jogos_PS4.forEach(e -> System.out.println(e.getName()));//imprimindo o nome dos jogos de ps4
-        System.out.println("");
-        List<Game> activisionGames = Servico.gamesByCompany(lista_jogos, Company.Activision);
-        System.out.println("Numero de jogos da activision: " + activisionGames.size());
-        activisionGames.forEach(e -> System.out.println(e.getName()));//imprimindo o nome dos jogos da activison
+        //Imprimindo o número de jogos de PS4
+        System.out.println("\nNúmero de jogos de PS4 (Melhor plaforma da lista): " + jogos_PS4.size() + "\n");
+        System.out.println("São eles: ");
+        jogos_PS4.forEach(e -> System.out.println("  " + e.getName()));
+        System.out.println(" ");
+
+        //Imprimindo o número de jogos da publisher Activision
+        List<Game> jogos_activision = Servico.gamesByCompany(lista_jogos, Company.Activision);
+        System.out.println("Número de jogos da Activision: " + jogos_activision.size() + "\n");
+        System.out.println("São eles: ");
+        jogos_activision.forEach(e -> System.out.println("  " + e.getName()));
     }
-
-
-
 }

@@ -5,10 +5,10 @@ public class Game {
     //Atributos
     private int rank;
     private String name;
-    private String platflorm;
+    private String platform;
     private int year;
-    private String publisher;
     private Double global_sales;
+    private String publisher;
 
     //Getters e Setters
     public int getRank() {return rank;}
@@ -19,9 +19,9 @@ public class Game {
 
     public void setName(String name) {this.name = name;}
 
-    public String getPlatflorm() {return platflorm;}
+    public String getPlatflorm() {return platform;}
 
-    public void setPlatflorm(String platflorm) {this.platflorm = platflorm;}
+    public void setPlatflorm(String platflorm) {this.platform = platflorm;}
 
     public int getYear() {return year;}
 
